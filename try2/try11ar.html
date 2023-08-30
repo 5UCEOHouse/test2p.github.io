@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>你會種出什麼花生</title>
+    <style>
+        body {
+            background-color: lightyellow;
+            text-align: center;
+        }
+        
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        .image {
+            margin-top: 50px;
+        }
+        
+        .button {
+	    background-color: #E29F45;
+            color: #FFFFFF;
+	    font-size: 24px;
+	    padding: 10px 30px;
+	    border:none;
+	    border-radius: 5px;
+	    cursor: pointer;
+	    box-shadow: 2px 2px #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="page active" id="page1">
+        <img src="cover.png" class="image" alt="Cover Image">
+        <button class="button" onclick="changePage('page2')">Start</button>
+    </div>
+    
+    <div class="page" id="page2">
+        <img src="introduction.png" class="image" alt="Introduction Image">
+        <button class="button" onclick="changePage('page3')">出發！
+</button>
+    </div>
+    
+    <div class="page" id="page3" onclick="changePage('page4')">
+        <img src="seedina.png" class="image" alt="Seedina Image">
+    </div>
+    
+    <div class="page" id="page4" onclick="changePage('page5')">
+        <img src="seedinb.png" class="image" alt="Seedinb Image">
+    </div>
+
+    <div class="page" id="page5" onclick="changePage('page6')">
+        <img src="seedinc.png" class="image" alt="Seedinc Image">
+    </div>
+
+
+    <div class="page" id="page6" onclick="changePage('page7')">
+        <img src="seedind.png" class="image" alt="Seedind Image">
+    </div>
+   
+    <div class="page" id="page7">
+        <img src="Q1.png" class="image" alt="Question 1">
+        <button class="button" onclick="updateResults('A')">A</button>
+        <button class="button" onclick="updateResults('B')">B</button>
+        <button class="button" onclick="updateResults('C')">C</button>
+        <button class="button" onclick="updateResults('D')">D</button>
+    </div>
+
+    <div class="page" id="page8" onclick="changePage('page9')">
+        <img src="seedinf.png" class="image" alt="Seedinf Image">
+    </div>
+
+    <div class="page" id="page9" onclick="changePage('page10')">
+        <img src="landa.png" class="image" alt="Landa Image">
+    </div>
+
+    <div class="page" id="page10" onclick="changePage('page11')">
+        <img src="landb.png" class="image" alt="Landb Image">
+    </div>
+
+    <div class="page" id="page11" onclick="changePage('page12')">
+        <img src="landc.png" class="image" alt="Landc Image">
+    </div>
+
+    <div class="page" id="page12">
+        <img src="Q2.png" class="image" alt="Question 2">
+        <button class="button" onclick="updateResults('2A')">2A</button>
+        <button class="button" onclick="updateResults('2B')">2B</button>
+    </div>
+
+    <div class="page" id="page13" onclick="changePage('page15')">
+        <img src="lande.png" class="image" alt="Lande Image">
+    </div>
+
+    <div class="page" id="page14" onclick="changePage('page15')">
+        <img src="landf.png" class="image" alt="Landf Image">
+    </div>
+
+    <div class="page" id="page15" onclick="changePage('page16')">
+        <img src="landg.png" class="image" alt="Landg Image">
+    </div>
+
+    <div class="page" id="page16" onclick="changePage('page17')">
+        <img src="landg1.png" class="image" alt="Landg1 Image">
+    </div>
+
+    <div class="page" id="page17" onclick="changePage('page18')">
+        <img src="landg2.png" class="image" alt="Landg2 Image">
+    </div>
+
+
+    <div class="page" id="page18" onclick="changePage('page19')">
+        <img src="landh.png" class="image" alt="Landh Image">
+    </div>
+
+    <div class="page" id="page19" onclick="changePage('page20')">
+        <img src="landi.png" class="image" alt="Landi Image">
+    </div>
+
+    <div class="page" id="page20" onclick="changePage('page21')">
+        <img src="landj.png" class="image" alt="Landj Image">
+    </div>
+
+    <div class="page" id="page21" onclick="changePage('page22')">
+        <img src="landk.png" class="image" alt="Landk Image">
+    </div>
+
+    <div class="page" id="page22" onclick="changePage('page23')">
+        <img src="landl.png" class="image" alt="Landl Image">
+    </div>
+
+    <div class="page" id="page23" onclick="changePage('page24')">
+        <img src="landm.png" class="image" alt="Landm Image">
+    </div>
+
+    <div class="page" id="page24" onclick="changePage('page25')">
+        <img src="landn.png" class="image" alt="Landn Image">
+    </div>
+
+    <div class="page" id="page25">
+        <img src="Q3.png" class="image" alt="Question 3">
+        <button class="button" onclick="updateResults('3A')">3A</button>
+        <button class="button" onclick="updateResults('3B')">3B</button>
+        <button class="button" onclick="updateResults('3C')">3C</button>
+        <button class="button" onclick="updateResults('3D')">3D</button>
+    </div>
+
+    <div class="page" id="page26" onclick="changePage('page27')">
+        <img src="hideseeda.png" class="image" alt="Hideseeda Image">
+    </div>
+
+    <div class="page" id="page27" onclick="changePage('page28')">
+        <img src="hideseedb.png" class="image" alt="Hideseedb Image">
+    </div>
+
+    <div class="page" id="page28" onclick="changePage('page29')">
+        <img src="littlea.png" class="image" alt="Littlea Image">
+    </div>
+
+    <div class="page" id="page29" onclick="changePage('page30')">
+        <img src="wlittleb.png" class="image" alt="Wlittleb Image">
+    </div>
+
+    <div class="page" id="page30">
+        <img src="Q4.png" class="image" alt="Question 4">
+        <button class="button" onclick="updateResults('4A')">4A</button>
+        <button class="button" onclick="updateResults('4B')">4B</button>
+        <button class="button" onclick="updateResults('4C')">4C</button>
+        <button class="button" onclick="updateResults('4D')">4D</button>
+    </div>
+
+    <div class="page" id="page31">
+        <img src="Q5.png" class="image" alt="Question 5">
+        <button class="button" onclick="updateResults('5A')">5A</button>
+        <button class="button" onclick="updateResults('5B')">5B</button>
+        <button class="button" onclick="updateResults('5C')">5C</button>
+        <button class="button" onclick="updateResults('5D')">5D</button>
+    </div>
+
+    <div class="page" id="page32" onclick="changePage('page33')">
+        <img src="growa.png" class="image" alt="Growa Image">
+    </div>
+
+    <div class="page" id="page33" onclick="changePage('page34')">
+        <img src="growb.png" class="image" alt="Growb Image">
+    </div>
+
+    <div class="page" id="page34" onclick="changePage('page35')">
+        <img src="growc.png" class="image" alt="Growc Image">
+    </div>
+
+    <div class="page" id="page35">
+        <img src="Q6.png" class="image" alt="Question 6">
+        <button class="button" onclick="updateResults('6A')">6A</button>
+        <button class="button" onclick="updateResults('6B')">6B</button>
+        <button class="button" onclick="updateResults('6C')">6C</button>
+        <button class="button" onclick="updateResults('6D')">6D</button>
+    </div>
+
+    <div class="page" id="page36" onclick="changePage('page37')">
+        <img src="likea.png" class="image" alt="Likea Image">
+    </div>
+
+    <div class="page" id="page37">
+        <img src="Q7.png" class="image" alt="Question 7">
+        <button class="button" onclick="updateResults('7A')">7A</button>
+        <button class="button" onclick="updateResults('7B')">7B</button>
+        <button class="button" onclick="updateResults('7C')">7C</button>
+        <button class="button" onclick="updateResults('7D')">7D</button>
+    </div>
+
+    <div class="page" id="page38" onclick="changePage('page39')">
+        <img src="likeb.png" class="image" alt="Likeb Image">
+    </div>
+
+    <div class="page" id="page39" onclick="changePage('page40')">
+        <img src="likec.png" class="image" alt="Likec Image">
+    </div>
+
+    <div class="page" id="page40" onclick="changePage('page41')">
+        <img src="liked.png" class="image" alt="Liked Image">
+    </div>
+
+    <div class="page" id="page41" onclick="changePage('page42')">
+        <img src="likee.png" class="image" alt="Likee Image">
+    </div>
+
+    <div class="page" id="page43">
+        <img src="Q8.png" class="image" alt="Question 8">
+        <button class="button" onclick="updateResults('8A')">8A</button>
+        <button class="button" onclick="updateResults('8B')">8B</button>
+        <button class="button" onclick="updateResults('8C')">8C</button>
+        <button class="button" onclick="updateResults('8D')">8D</button>
+    </div>
+
+    <div class="page" id="page44">
+        <img src="Q9.png" class="image" alt="Question 9">
+        <button class="button" onclick="updateResults('9A')">9A</button>
+        <button class="button" onclick="updateResults('9B')">9B</button>
+        <button class="button" onclick="updateResults('9C')">9C</button>
+        <button class="button" onclick="updateResults('9D')">9D</button>
+    </div>
+
+    <div class="page" id="page45" onclick="changePage('page46')">
+        <img src="f1.png" class="image" alt="F1 Image">
+    </div>
+
+    <div class="page" id="page46" onclick="changePage('page47')">
+        <img src="f2.png" class="image" alt="F2 Image">
+    </div>
+
+    <div class="page" id="page23">
+        <h1>第23页</h1>
+        <!-- 这是第23页的内容 -->
+    </div>
+    
+    <script>
+        var results = {
+            产量: 0,
+            心情: 0,
+            酒鬼花生结局: 0,
+            辣味酒鬼花生结局: 0,
+            珍珠型: 0,
+            龙生型: 0,
+            普通型: 0,
+            多粒型: 0,
+            花生油结局: 0,
+            彩蛋A: 0,
+            彩蛋B: 0,
+            品质: 0,
+            魚皮花生结局: 0,
+            旅行结局: 0
+        };
+        
+        function changePage(pageId) {
+            // 隐藏当前页
+            var currentPage = document.querySelector('.page.active');
+            currentPage.classList.remove('active');
+            
+            // 显示目标页
+            var nextPage = document.getElementById(pageId);
+            nextPage.classList.add('active');
+        }
+
+        function updateResults(answer) {
+            if (answer === 'A') {
+                results['普通型'] += 1;
+                results['酒鬼花生结局'] += 1;
+                results['辣味酒鬼花生结局'] += 1;
+            } else if (answer === 'B') {
+                results['珍珠型'] += 1;
+                results['酒鬼花生结局'] += 1;
+                results['辣味酒鬼花生结局'] += 1;
+            } else if (answer === 'C') {
+                results['产量'] += 1;
+                results['多粒型'] += 1;
+            } else if (answer === 'D') {
+                results['心情'] += 1;
+                results['龙生型'] += 1;
+            } else if (answer === '2A') {
+                results['花生油结局'] += 1;
+                results['彩蛋A'] += 1;
+                changePage('page13');
+                return;
+            } else if (answer === '2B') {
+                results['心情'] += 1;
+                results['彩蛋B'] += 1;
+                changePage('page14');
+                return;
+            } else if (answer === '3A') {
+                results['酒鬼花生结局'] += 1;
+                changePage('page26');
+                return;
+            } else if (answer === '3B') {
+                results['品质'] += 1;
+                results['产量'] += 1;
+                results['心情'] += 1;
+                results['酒鬼花生结局'] += 1;
+                changePage('page26');
+                return;
+            } else if (answer === '3C') {
+                results['品质'] += 1;
+                results['产量'] += 1;
+                results['心情'] += 1;
+                results['酒鬼花生结局'] += 1;
+                results['旅行结局'] += 1;
+                changePage('page26');
+                return;
+            } else if (answer === '3D') {
+                results['酒鬼花生结局'] += 1;    
+                changePage('page24');
+                return;
+            } else if (answer === '4A') {
+                results['魚皮花生结局'] += 1;
+                changePage('page31');
+                return;
+            } else if (answer === '4B') {
+                results['品质'] += 1;
+                results['产量'] += 1;
+                results['心情'] += 1;
+                results['魚皮花生结局'] += 1;
+                changePage('page31');
+                return;
+            } else if (answer === '4C') {
+                results['品质'] += 2;
+                results['产量'] += 2;
+                results['心情'] += 2;
+                results['酒鬼花生结局'] += 1;
+                changePage('page31');
+                return;
+            } else if (answer === '4D') {
+                results['品质'] += 2;
+                results['产量'] += 2;
+                results['心情'] += 2;
+                results['辣味酒鬼花生结局'] += 1;
+                results['酒鬼花生结局'] += 1;    
+                changePage('page31');
+                return;
+            } else if (answer === '5A') {
+                results['花生油结局'] += 1;
+                changePage('page32');
+                return;
+            } else if (answer === '5B') {
+                results['品质'] += 1;
+                results['产量'] += 1;
+                results['心情'] += 1;
+                results['酒鬼花生结局'] += 1;
+                changePage('page32');
+                return;
+            } else if (answer === '5C') {
+                results['魚皮花生结局'] += 1;
+                changePage('page32');
+                return;
+            } else if (answer === '5D') {
+                results['魚皮花生结局'] += 1;    
+                changePage('page32');
+                return;
+            } else if (answer === '6A') {
+                results['心情'] += 1;
+                changePage('page36');
+                return;
+            } else if (answer === '6B') {
+                results['品质'] += 1;
+                results['产量'] += 1;
+                results['心情'] += 1;
+                changePage('page36');
+                return;
+            } else if (answer === '6C') {
+                results['品质'] += 1;
+                results['产量'] += 1;
+                changePage('page36');
+                return;
+            } else if (answer === '6D') {
+                results['魚皮花生结局'] += 1;    
+                results['辣味酒鬼花生结局'] += 1;
+                changePage('page36');
+                return;
+            } else if (answer === '7A') {
+                results['品质'] += 2;
+                results['产量'] += 1;
+                results['心情'] += 1;
+                changePage('page38');
+                return;
+            } else if (answer === '7B') {
+                results['品质'] += 1;
+                results['产量'] += 2;
+                results['心情'] += 1;
+                changePage('page38');
+                return;
+            } else if (answer === '7C') {
+                results['品质'] += 2;
+                results['产量'] += 1;
+                results['心情'] += 2;
+                results['旅行结局'] += 1;
+                changePage('page38');
+                return;
+            } else if (answer === '7D') {
+                results['品质'] += 1;
+                results['产量'] += 2;
+                results['心情'] += 1;
+                changePage('page38');
+                return;
+            } else if (answer === '8A') {
+                results['品质'] += 2;
+                results['产量'] += 2;
+                results['心情'] += 2;
+                results['酒鬼花生结局'] += 1;
+                changePage('page44');
+                return;
+            } else if (answer === '8B') {
+                results['品质'] += 1;
+                results['产量'] += 1;
+                results['心情'] += 2;
+                results['辣味酒鬼花生结局'] += 1;
+                changePage('page44');
+                return;
+            } else if (answer === '8C') {
+                results['品质'] += 1;
+                results['产量'] += 1;
+                results['心情'] += 2;
+                results['旅行结局'] += 1;
+                changePage('page44');
+                return;
+            } else if (answer === '8D') {
+                results['花生油结局'] += 1;
+                changePage('page44');
+                return;
+            } else if (answer === '9A') {
+                changePage('page45');
+                return;
+            } else if (answer === '9B') {
+                changePage('page45');
+                return;
+            } else if (answer === '9C') {
+                results['品质'] += 1;
+                results['产量'] += 1;
+                results['心情'] += 2;
+                changePage('page45');
+                return;
+            } else if (answer === '9D') {
+                results['品质'] += 1;
+                results['产量'] += 1;
+                results['心情'] += 1;
+                results['魚皮花生结局'] += 1; 
+                changePage('page45');
+                return;
+            }
+
+            changePage('page8');
+
+        }
+    </script>
+</body>
+</html>
+```
